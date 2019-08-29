@@ -1,0 +1,78 @@
+{% extends 'Game/base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+
+{% block content %}
+
+<div id = "gameBox" class = "myBox" hidden>
+  <canvas id = "canva" width = "800px" height = "800px"></canvas>
+  <div id = "scoreLabel" >{% trans 'score' %}</div>
+  <div id = "endLabel" hidden>{% trans 'end' %}</div>
+  <br>
+  <button id = "pauseBtn">{% trans 'pause' %}</button>
+  <button id = "startBtn">{% trans 'again' %}</button>
+  <button id="menuBtn">{% trans 'menu' %}</button>
+</div>
+
+<div id = "centerBox" hidden>
+  <div id = "mainMenu" class = "myBox">
+    <span class = "bigText">{% trans 'title' %}</span>
+    <hr>
+    <div class = "separator"></div>
+    <div align = "center">
+      <button id = "b1">{% trans 'start' %}</button>
+      <div class = "separator"></div>
+      <button id = "b2">{% trans 'records' %}</button>
+      <div class = "separator"></div>
+      <button id = "b3">{% trans 'descripe' %}</button>
+      <div class = "separator"></div>
+      <button id = "b4">{% trans 'aboutme' %}</button>
+    </div>
+  </div>
+
+  <div id = "aboutCreator" class = "myBox" hidden>
+    <span class = "bigText">{% trans 'aboutme' %}</span>
+    <hr>
+    <div>
+      <p>
+        {% trans 'aboutmetxt' %}
+      </p>
+      <div class = "separator"></div>
+      <div align = "center">
+        <button id = "b5">{% trans 'menu' %}</button>
+      </div>
+    </div>
+  </div>
+
+  <div id = "aboutGame" class = "myBox" hidden>
+    <span class = "bigText">{% trans 'descripe' %}</span>
+    <hr>
+    <div>
+      <p>
+        {% trans 'aboutgametxt' %}
+      </p>
+      <p> {% trans 'enjoy' %}</p>
+      <div class = "separator"></div>
+      <div align = "center">
+        <button id = "b6">{% trans 'menu' %}</button>
+      </div>
+    </div>
+  </div>
+
+  <div id = "recordBox" class = "myBox" hidden>
+    <span class = "bigText">{% trans 'records' %}</span>
+    <hr>
+    <%= render 'show_record' %}
+    <br>
+    <div align = "center">
+      <button id = "b7">{% trans 'menu' %}</button>
+    </div>
+  </div>
+
+</div>
+
+    <script src = "{%  static 'source/changeLang.js' %}"></script>
+    <script src = "{%  static 'Game/code1.js' %}" ></script>
+    <script src = "{%  static 'Game/mainScript.js' %}"></script>
+{% endblock %}
