@@ -15,4 +15,6 @@ urlpatterns = [
     url(r'^auth/', views.auth, name='auth'),
     # записать новый рекорд
     url(r'^rec/', views.rec, name='rec'),
+    # получить рекорды
+    url(r'^info', views.info, name='info'),
 ]

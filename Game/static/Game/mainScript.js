@@ -8,15 +8,29 @@
         }
     }
 
+
+    function getInfo() {
+        let csrf=window.Cookies.get('csrftoken');
+        $.ajax({
+            type: "GET",
+            url: req,
+            data: {
+                csrfmiddlewaretoken: csrf,
+                user_score: max,
+                game_time: time
+            }
+        });
+    }
+
+
     function addListenersToButtons() {
         elem("b4").addEventListener("click", function () {
-            //hideAllBoxes();
-            //elem("aboutCreator").hidden = false;
-            console.log('awd')
+            showBox('aboutCreator');
         });
 
         elem("b3").addEventListener("click", function () {
             showBox('aboutGame');
+            getInfo();
         });
 
         elem("b5").addEventListener("click", function () {

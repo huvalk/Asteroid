@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import os
 
 AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
     'Game.auth_backends.MyUserModelBackend',
 )
 
@@ -134,7 +133,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_URL = '/game/login/'
-
-AUTH_USER_MODEL = 'Game.MyUser'
 
 CUSTOM_USER_MODEL = 'Game.MyUser'

@@ -48,7 +48,14 @@ def auth(request):
 def rec(request):
     user_score = str(request.POST['user_score'])
     game_time = str(request.POST['game_time'])
-    print(request.user.hight_score)
+    user=request.user
+    user.hight_score=user_score
+    user.game_time=game_time
+
+
+@login_required
+#def info(request):
+
 
 
 def main_paige(request, name):

@@ -316,6 +316,7 @@ window.addEventListener("load", function () {
                 endLabel.hidden = false;
                 endLabel.innerHTML = endtxt + max;
                 let csrf=window.Cookies.get('csrftoken');
+
                 $.ajax({
                     type: "POST",
                     url: req,
