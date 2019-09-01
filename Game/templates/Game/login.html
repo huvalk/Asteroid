@@ -1,0 +1,32 @@
+{% extends 'Game/base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+
+
+    <div id = "authBox">
+        <span class = "bigText">{% trans 'entry' %}</span>
+        <hr>
+        {% csrf_token %}
+        <label id="msgLbl"></label>
+            <label>{% trans 'user_name' %}</label>
+            <br>
+            <input name="user_name" type="text">
+            <br>
+            <label>{% trans 'pass' %}</label>
+            <br>
+            <input name="password" type="password">
+            <br>
+            <br>
+            <button id="subBtn">{% trans 'enter' %}</button>
+        <br>
+        <p> {% trans 'yet' %} <a href="">{% trans 'reg' %}</a> </p>
+
+    </div>
+    <script>
+        let req="{% url 'auth' %}";
+        let game_url="{% url 'index' %}"
+    </script>
+    <script src="{% static 'Game/login.js' %}"></script>
+{% endblock %}

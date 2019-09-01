@@ -1,10 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import User, UserManager
 
-# создаем таблицу в бд
-class Game(models.Model):
-    game_date = models.DateTimeField
-    score = models.IntegerField(default=0)
-# метод выводит текстовую информацию об объекте
-    def __str__(self):
-        return self.score
+# создаем собственного пользователя
+class MyUser(User):
+    game_time = models.TimeField
+    hight_score = models.IntegerField(default=0)
+
+    objects = UserManager()
 # можем добавлять кастомные методы
