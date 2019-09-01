@@ -44,6 +44,12 @@ def auth(request):
     return HttpResponse(json.dumps(response), content_type='application/json')
 
 
+@login_required
+def rec(request):
+    user_score = str(request.POST['user_score'])
+    game_time = str(request.POST['game_time'])
+    print(request.user.hight_score)
+
 
 def main_paige(request, name):
     return HttpResponse("This is menu of the game named %s." % name)

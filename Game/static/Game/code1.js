@@ -315,11 +315,15 @@ window.addEventListener("load", function () {
                 scoreLabel.hidden = true;
                 endLabel.hidden = false;
                 endLabel.innerHTML = endtxt + max;
+                let csrf=window.Cookies.get('csrftoken');
                 $.ajax({
                     type: "POST",
-                    url: '/game/record',
-                    dataType: JSON,
-                    data: {point: JSON.stringify (max), time: JSON.stringify (time)}
+                    url: req,
+                    data: {
+                        csrfmiddlewaretoken: csrf,
+                        user_score: max,
+                        game_time: time
+                    }
                 });
             }
         }

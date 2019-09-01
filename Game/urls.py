@@ -11,6 +11,8 @@ urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
     # страница входа
     url(r'^login/', views.log, name='login_page'),
+    # авторизация
     url(r'^auth/', views.auth, name='auth'),
-
+    # записать новый рекорд
+    url(r'^rec/', views.rec, name='rec'),
 ]
