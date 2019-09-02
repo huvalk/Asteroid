@@ -4,6 +4,7 @@ from django.template import RequestContext, loader
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 import json
+from Game.models import get_records
 
 @login_required
 def index(request):
@@ -54,8 +55,9 @@ def rec(request):
 
 
 @login_required
-#def info(request):
-
+def info(request):
+    response = get_records(request.user)
+    return HttpResponse(json.dumps(response), content_type='application/json')
 
 
 def main_paige(request, name):

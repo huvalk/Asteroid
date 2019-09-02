@@ -22,7 +22,7 @@ class MyUserModelBackend(ModelBackend):
     @property
     def user_class(self):
         if not hasattr(self, '_user_class'):
-            self._user_class = apps.get_model('Game', 'MyUser')
+            self._user_class = apps.get_model(*settings.CUSTOM_USER_MODEL.split('.', 2))#('Game', 'MyUser')
             if not self._user_class:
                 raise ImproperlyConfigured('Could not get custom user model')
         return self._user_class
