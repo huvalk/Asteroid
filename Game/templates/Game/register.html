@@ -1,0 +1,38 @@
+{% extends 'Game/base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+
+{% block content %}
+
+    <div id = "regBox">
+        <span class = "bigText">{% trans 'register' %}</span>
+        <hr>
+            <label>{% trans 'user_name' %}</label>
+            <br>
+            <input name="user_name" type="text" autocomplete="off">
+            <br>
+            <label>{% trans 'pass' %}</label>
+            <br>
+            <input name="password" type="password" autocomplete="off">
+            <br>
+            <label>{% trans 'pass' %}</label>
+            <br>
+            <input name="password" type="password" autocomplete="off">
+            <br>
+                <label id="msgLbl"></label>
+            <br>
+            <button id="subBtn">{% trans 'enter' %}</button>
+        <br>
+        <p> {% trans 'allready' %} <a href="">{% trans 'log' %}</a> </p>
+
+    </div>
+    <script>
+        let check='{% url 'check' %}';
+        let login_url='{% url 'login_page' %}';
+        let err_user = '{% trans 'err_user' %}'
+        let err_pass = '{% trans 'err_pass' %}'
+    </script>
+    <script src="{% static 'Game/registrate.js' %}"></script>
+
+{% endblock %}

@@ -4,7 +4,7 @@ from django.template import RequestContext, loader
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 import json
-from Game.models import get_records
+from Game.models import MyUser, get_records, create_user
 
 @login_required
 def index(request):
@@ -50,13 +50,33 @@ def rec(request):
     user_score = str(request.POST['user_score'])
     game_time = str(request.POST['game_time'])
     user=request.user
-    user.hight_score=user_score
-    user.game_time=game_time
+    user.hight_score = user_score
+    user.game_time = game_time
+    user.save()
+    return HttpResponse('success')
 
 
 @login_required
 def info(request):
     response = get_records(request.user)
+    return HttpResponse(json.dumps(response), content_type='application/json')
+
+
+def reg_page(request):
+    return render(request, 'Game/register.html', {})
+
+
+def check(request):
+    name = request.POST['username']
+    password = request.POST['password']
+    user = MyUser.objects.filter(username=name)
+    print(user)
+    if not user.exists():
+        create_user(name, password)
+        response = {'status': 1, 'message': "Ok"}
+        print('!!!')
+    else:
+        response = {'status': 0, 'message': "Error"}
     return HttpResponse(json.dumps(response), content_type='application/json')
 
 

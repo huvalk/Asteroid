@@ -8,7 +8,6 @@
     <div id = "authBox">
         <span class = "bigText">{% trans 'entry' %}</span>
         <hr>
-        <label id="msgLbl"></label>
             <label>{% trans 'user_name' %}</label>
             <br>
             <input name="user_name" type="text">
@@ -17,13 +16,15 @@
             <br>
             <input name="password" type="password">
             <br>
+                <label id="msgLbl"></label>
             <br>
             <button id="subBtn">{% trans 'enter' %}</button>
         <br>
-        <p> {% trans 'yet' %} <a href="">{% trans 'reg' %}</a> </p>
+        <p> {% trans 'yet' %} <a href="{% url 'registrate' %}">{% trans 'reg' %}</a> </p>
 
     </div>
     <script>
+        let err_pass = '{% trans 'err_pass' %}'
         let req="{% url 'auth' %}";
         let game_url="{% url 'index' %}";
     </script>

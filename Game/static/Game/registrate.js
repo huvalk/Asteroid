@@ -4,26 +4,34 @@
 window.addEventListener('load', function () {
         let subBtn = elem('subBtn');
         let user_name = document.getElementsByName('user_name')[0];
-        let password = document.getElementsByName('password')[0];
+        let password = document.getElementsByName('password');
         let msgLbl = elem('msgLbl');
 
-
         subBtn.addEventListener('click', function () {
+
+
             let csrf=window.Cookies.get('csrftoken');
+            console.log(password[0], password[1])
+            if (password[0].value !== password[1].value) {
+                msgLbl.innerText = err_pass;
+                console.log('afi');
+                return;
+            }
+            console.log('af')
             $.ajax({
                 type: "POST",
-                url: req,
+                url: check,
                 data: {
                     csrfmiddlewaretoken: csrf,
-                    user_name: user_name.value,
-                    password: password.value
+                    username: user_name.value,
+                    password: password[0].value
                 },
                 success: function (data) {
-                    console.log(data.status)
+                    console.log(data)
                     if (parseInt(data.status) === 1) {
-                        window.location=game_url;
+                        window.location=login_url;
                     } else {
-                        msgLbl.innerText = err_pass;
+                        msgLbl.innerText = err_user;
                     }
                 }
             });

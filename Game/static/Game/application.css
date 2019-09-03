@@ -57,6 +57,16 @@ table {
     text-align: center;
 }
 
+#regBox{
+    margin: 0 auto;
+    width: 800px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+    text-align: center;
+}
+
 
 #greatingBox{
   margin: 0 auto;
