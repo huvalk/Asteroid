@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 02:17+0300\n"
+"POT-Creation-Date: 2019-09-03 14:16+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,55 +17,123 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: templates/Game/index.html:8
+#: Game/templates/Game/index.html:10
 msgid "score"
 msgstr "Points: "
 
-#: templates/Game/index.html:9
+#: Game/templates/Game/index.html:11
 msgid "end"
 msgstr "Game over. Your score: "
 
-#: templates/Game/index.html:11
+#: Game/templates/Game/index.html:13
 msgid "pause"
-msgstr "PauseZ "
+msgstr "Pause"
 
-#: templates/Game/index.html:12
+#: Game/templates/Game/index.html:14
 msgid "again"
 msgstr "Again"
 
-#: templates/Game/index.html:13 templates/Game/index.html.py:42
-#: templates/Game/index.html:57 templates/Game/index.html.py:68
+#: Game/templates/Game/index.html:15 Game/templates/Game/index.html.py:43
+#: Game/templates/Game/index.html:58 Game/templates/Game/index.html.py:75
 msgid "menu"
 msgstr "Menu"
 
-#: templates/Game/index.html:19
+#: Game/templates/Game/index.html:20
 msgid "title"
 msgstr "Asteroid"
 
-#: templates/Game/index.html:23
+#: Game/templates/Game/index.html:24
 msgid "start"
 msgstr "Start"
 
-#: templates/Game/index.html:25 templates/Game/index.html.py:63
+#: Game/templates/Game/index.html:26 Game/templates/Game/index.html.py:64
 msgid "records"
-msgstr "Your records"
+msgstr "Records"
 
-#: templates/Game/index.html:27 templates/Game/index.html.py:48
+#: Game/templates/Game/index.html:28 Game/templates/Game/index.html.py:49
 msgid "descripe"
 msgstr "About game"
 
-#: templates/Game/index.html:29 templates/Game/index.html.py:34
+#: Game/templates/Game/index.html:30 Game/templates/Game/index.html.py:35
 msgid "aboutme"
 msgstr "About me"
 
-#: templates/Game/index.html:38
+#: Game/templates/Game/index.html:39
 msgid "aboutmetxt"
-msgstr "Hi! I hope, you liked a game and therefore you decided to read information on me."
+msgstr ""
+"Hi! I hope, you liked a game and therefore you decided to read information "
+"on me."
 
-#: templates/Game/index.html:52
+#: Game/templates/Game/index.html:53
 msgid "aboutgametxt"
-msgstr "This game in accuracy as the old arcadian game Asteroid. Well almost. The essence is simple - management on A and D to shoot on W. In general and all."
+msgstr ""
+"This game in accuracy as the old arcadian game Asteroid. Well almost. The "
+"essence is simple - management on A and D to shoot on W. In general and all."
 
-#: templates/Game/index.html:54
+#: Game/templates/Game/index.html:55
 msgid "enjoy"
 msgstr "Enjoy the Game!"
+
+#: Game/templates/Game/index.html:68
+msgid "username"
+msgstr "User name"
+
+#: Game/templates/Game/index.html:69
+msgid "userscore"
+msgstr "Points"
+
+#: Game/templates/Game/index.html:70
+msgid "gametime"
+msgstr "Time"
+
+#: Game/templates/Game/login.html:9
+msgid "entry"
+msgstr "Sign in"
+
+#: Game/templates/Game/login.html:11 Game/templates/Game/register.html.py:11
+msgid "user_name"
+msgstr "User name"
+
+#: Game/templates/Game/login.html:15 Game/templates/Game/register.html.py:15
+msgid "pass"
+msgstr "Password"
+
+#: Game/templates/Game/login.html:21 Game/templates/Game/register.html.py:25
+msgid "enter"
+msgstr "Enter"
+
+#: Game/templates/Game/login.html:23
+msgid "yet"
+msgstr "Sign up "
+
+#: Game/templates/Game/login.html:23
+msgid "reg"
+msgstr "now"
+
+#: Game/templates/Game/login.html:27
+msgid "err_pass"
+msgstr "Wrong user name or password"
+
+#: Game/templates/Game/register.html:9
+msgid "register"
+msgstr "Sign up"
+
+#: Game/templates/Game/register.html:19
+msgid "rep_pass"
+msgstr "Repeat password"
+
+#: Game/templates/Game/register.html:27
+msgid "allready"
+msgstr "Already with us? - "
+
+#: Game/templates/Game/register.html:27
+msgid "log"
+msgstr "Sign in!"
+
+#: Game/templates/Game/register.html:33
+msgid "err_user"
+msgstr "User already exists"
+
+#: Game/templates/Game/register.html:34
+msgid "err_pass_eq"
+msgstr "Passwords don`t match"

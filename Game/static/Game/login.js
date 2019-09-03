@@ -19,7 +19,6 @@ window.addEventListener('load', function () {
                     password: password.value
                 },
                 success: function (data) {
-                    console.log(data.status)
                     if (parseInt(data.status) === 1) {
                         window.location=game_url;
                     } else {

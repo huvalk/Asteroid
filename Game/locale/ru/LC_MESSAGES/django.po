@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 01:55+0300\n"
+"POT-Creation-Date: 2019-09-03 14:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,56 +20,123 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: templates/Game/index.html:8
+#: Game/templates/Game/index.html:10
 msgid "score"
-msgstr "Счет"
+msgstr "Счет: "
 
-#: templates/Game/index.html:9
+#: Game/templates/Game/index.html:11
 msgid "end"
-msgstr ""
+msgstr "Игра окончена. Счет: "
 
-#: templates/Game/index.html:11
+#: Game/templates/Game/index.html:13
 msgid "pause"
 msgstr "Пауза"
 
-#: templates/Game/index.html:12
+#: Game/templates/Game/index.html:14
 msgid "again"
 msgstr "Заново"
 
-#: templates/Game/index.html:13 templates/Game/index.html.py:42
-#: templates/Game/index.html:57 templates/Game/index.html.py:68
+#: Game/templates/Game/index.html:15 Game/templates/Game/index.html.py:43
+#: Game/templates/Game/index.html:58 Game/templates/Game/index.html.py:75
 msgid "menu"
 msgstr "Меню"
 
-#: templates/Game/index.html:19
+#: Game/templates/Game/index.html:20
 msgid "title"
 msgstr "Астероид"
 
-#: templates/Game/index.html:23
+#: Game/templates/Game/index.html:24
 msgid "start"
 msgstr "Начать"
 
-#: templates/Game/index.html:25 templates/Game/index.html.py:63
+#: Game/templates/Game/index.html:26 Game/templates/Game/index.html.py:64
 msgid "records"
 msgstr "Рекорды"
 
-#: templates/Game/index.html:27 templates/Game/index.html.py:48
+#: Game/templates/Game/index.html:28 Game/templates/Game/index.html.py:49
 msgid "descripe"
 msgstr "Описание"
 
-#: templates/Game/index.html:29 templates/Game/index.html.py:34
+#: Game/templates/Game/index.html:30 Game/templates/Game/index.html.py:35
 msgid "aboutme"
 msgstr "Об авторе"
 
-#: templates/Game/index.html:38
+#: Game/templates/Game/index.html:39
 msgid "aboutmetxt"
-msgstr "Привет! Надеюсь, тебе понравилась игра, и поэтому ты решил (или решила) прочитать информацию обо мне."
+msgstr ""
+"Привет! Надеюсь, тебе понравилась игра, и поэтому ты решил (или решила) "
+"прочитать информацию обо мне."
 
-#: templates/Game/index.html:52
+#: Game/templates/Game/index.html:53
 msgid "aboutgametxt"
-msgstr "Эта игра в точности как старая аркадная игра Asteroid. Ну почти. Суть проста - управление на A и D, стрелять на NUM5. В общем-то и все."
+msgstr ""
+"Эта игра в точности как старая аркадная игра Asteroid. Ну почти. Суть проста "
+"- управление на A и D, стрелять на NUM5. В общем-то и все."
 
-
-#: templates/Game/index.html:54
+#: Game/templates/Game/index.html:55
 msgid "enjoy"
 msgstr "Наслаждайтесь"
+
+#: Game/templates/Game/index.html:68
+msgid "username"
+msgstr "Никнейм"
+
+#: Game/templates/Game/index.html:69
+msgid "userscore"
+msgstr "Счет"
+
+#: Game/templates/Game/index.html:70
+msgid "gametime"
+msgstr "Время"
+
+#: Game/templates/Game/login.html:9
+msgid "entry"
+msgstr "Войти"
+
+#: Game/templates/Game/login.html:11 Game/templates/Game/register.html.py:11
+msgid "user_name"
+msgstr "Никнейм"
+
+#: Game/templates/Game/login.html:15 Game/templates/Game/register.html.py:15
+msgid "pass"
+msgstr "Пароль"
+
+#: Game/templates/Game/login.html:21 Game/templates/Game/register.html.py:25
+msgid "enter"
+msgstr "Ввести"
+
+#: Game/templates/Game/login.html:23
+msgid "yet"
+msgstr "Еще не "
+
+#: Game/templates/Game/login.html:23
+msgid "reg"
+msgstr "зарегистрировались?"
+
+#: Game/templates/Game/login.html:27
+msgid "err_pass"
+msgstr "Неверное имя пользователя или пароль"
+
+#: Game/templates/Game/register.html:9
+msgid "register"
+msgstr "Регистрация"
+
+#: Game/templates/Game/register.html:19
+msgid "rep_pass"
+msgstr "Повторите пароль"
+
+#: Game/templates/Game/register.html:27
+msgid "allready"
+msgstr "Уже зарегистрировались? - "
+
+#: Game/templates/Game/register.html:27
+msgid "log"
+msgstr "Войдите!"
+
+#: Game/templates/Game/register.html:33
+msgid "err_user"
+msgstr "Такой пользователь уже существует"
+
+#: Game/templates/Game/register.html:34
+msgid "err_pass_eq"
+msgstr "Пароли не совпадают"
