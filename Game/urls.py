@@ -20,5 +20,5 @@ urlpatterns = [
     # страница регистрации
     url('^registrate/', views.reg_page, name='registrate'),
     # регистрация
-    url('^check', views.check, name='check')
+    url('^check/', views.check, name='check')
 ]
