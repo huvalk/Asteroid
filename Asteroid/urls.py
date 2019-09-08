@@ -27,5 +27,5 @@ urlpatterns = [
 
 
 urlpatterns += i18n_patterns(
-    url(r'^game/', include('Game.urls')),
+    url('', include('Game.urls')),
 )
